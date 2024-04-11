@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:29:14 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/11 16:40:56 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/11 17:31:23 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ WrongCat::~WrongCat() {
     std::cout << "WrongCat destructor called" << std::endl;
 }
 
-WrongCat::WrongCat(const WrongCat& other) : WrongAnimal(other) {
+WrongCat::WrongCat(const WrongCat & other) : WrongAnimal(other) {
     *this = other;
     std::cout << "WrongCat copy constructor called" << std::endl;
 }
 
-WrongCat& WrongCat::operator=(const WrongCat& other) {
+WrongCat & WrongCat::operator = (const WrongCat & other) {
     WrongAnimal::operator=(other);
     return *this;
 }

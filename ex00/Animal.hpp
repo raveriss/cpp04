@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:46:25 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/11 16:48:25 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/11 17:30:11 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ protected:
 public:
     Animal();
     virtual ~Animal();
-    Animal(const Animal& other);
-    Animal& operator=(const Animal& other);
+    Animal(const Animal & other);
+    Animal & operator=(const Animal & other);
     
     virtual void makeSound() const;
     std::string getType() const;
