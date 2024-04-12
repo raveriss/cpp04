@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 15:03:00 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/11 17:34:56 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/12 17:06:50 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,14 @@ Animal::~Animal()
 	std::cout << "Animal destructor called" << std::endl;
 }
 
-Animal::Animal(const Animal & other)
+/**
+ * @brief Constructeur de copie Animal
+ */
+Animal::Animal(const Animal & other) : type(other.type)  // Utilisation de l'initialisation de liste pour copier directement
 {
-	*this = other;
+	std::cerr << "Animal copy constructor called. Type: " << type << std::endl;
 }
+
 
 Animal & Animal::operator = (const Animal & other)
 {

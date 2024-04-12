@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:50:37 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/11 17:45:24 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/12 14:41:52 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 
 class Cat : public Animal {
 public:
-    Cat();
-    ~Cat();
-    Cat(const Cat & originCat);
-    Cat & operator = (const Cat & originCat);
+	Cat();
+	~Cat();
+	Cat(const Cat & originCat);
+	Cat & operator = (const Cat & originCat);
 
-    void makeSound() const;
+	void makeSound() const;
 };
 
 #endif

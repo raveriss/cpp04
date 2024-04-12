@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:26:56 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/11 17:33:46 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/12 17:12:05 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,10 @@ Cat::Cat(const Cat & other) : Animal(other) {}
 
 Cat & Cat::operator=(const Cat & other)
 {
-	Animal::operator=(other);
-	return *this;
+    if (this != & other) {
+        this->type = other.type;
+    }
+    return *this;
 }
 
 void Cat::makeSound() const
