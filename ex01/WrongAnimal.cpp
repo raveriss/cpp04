@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:33:55 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 13:19:25 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/15 14:03:18 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 /**
  * @brief Constructeur par défaut FragTrap
  */
-WrongAnimal::WrongAnimal() : type("WrongAnimal") {
+WrongAnimal::WrongAnimal() : _type("WrongAnimal") {
     std::cout << "WrongAnimal default constructor called" << std::endl;
 }
 
@@ -25,7 +25,7 @@ WrongAnimal::WrongAnimal() : type("WrongAnimal") {
  */
 WrongAnimal & WrongAnimal::operator=(const WrongAnimal & other) {
     if (this != & other) {
-        this->type = other.type;
+        this->_type = other._type;
     }
     return *this;
 }
@@ -49,7 +49,7 @@ void WrongAnimal::makeSound() const {
  * @brief Accesseur type WrongAnimal
  */
 std::string WrongAnimal::getType() const {
-    return type;
+    return _type;
 }
 
 /**

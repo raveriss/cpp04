@@ -6,41 +6,54 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:26:56 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 13:04:56 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/15 14:51:50 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
 /**
- * @brief Constructeur par défaut FragTrap
+ * @brief Constructeur par défaut Cat
  */
-Cat::Cat()
+Cat::Cat() : Animal()
 {
-	type = "Cat";
-	std::cout << "Cat constructor called" << std::endl;
+	_type = "Cat";
+	_brain = new Brain();
+	std::cout << "Cat default constructor called" << std::endl;
 }
 
 /**
- * @brief Destructeur FragTrap
+ * @brief Destructeur Cat
  */
 Cat::~Cat()
 {
+	if (_brain != NULL)
+	{
+		delete _brain;
+		_brain = NULL;
+	}
 	std::cout << "Cat destructor called" << std::endl;
 }
 
 /**
- * @brief Constructeur de copie FragTrap
+ * @brief Constructeur de copie Cat
  */
-Cat::Cat(const Cat & other) : Animal(other) {}
+Cat::Cat(const Cat & root) : Animal(root) {}
 
 /**
- * @brief Opérateur d'affectation FragTrap
+ * @brief Opérateur d'affectation Cat
  */
-Cat & Cat::operator=(const Cat & other)
+Cat & Cat::operator = (const Cat & root)
 {
-    if (this != & other) {
-        this->type = other.type;
+    std::cout << "Cat assignment operator called" << std::endl;
+    if (this != &root) {
+        Animal::operator=(root);
+        if (_brain != NULL)
+		{
+			delete _brain;
+			_brain = NULL;
+		}
+        _brain = new Brain(*root._brain);
     }
     return *this;
 }

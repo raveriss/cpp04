@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/11 16:33:05 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 13:22:03 by raveriss         ###   ########.fr       */
+/*   Created: 2024/04/11 14:50:37 by raveriss          #+#    #+#             */
+/*   Updated: 2024/04/15 13:56:51 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
-#include <string>
+#include "Animal.hpp"
+#include "Brain.hpp"
 
 /**
- * @brief Classe WrongAnimal
- * @motclef classe, WrongAnimal, type, son non-polymorphique
+ * @brief Classe Cat, dérivée de Animal
+ * @motclef classe, héritage, Cat, Animal, son spécifique
  * @méthodes constructeur, destructeur, constructeur de copie, opérateur d'affectation,
- * émission sonore, accesseur type
+ * émission sonore spécifique
  */
-class WrongAnimal
+class Cat : public Animal
 {
-	protected:
-		std::string type;
+	private:
+		Brain * _brain;
 	public:
-		WrongAnimal();
-		virtual ~WrongAnimal();
-		WrongAnimal(const WrongAnimal & other);
-		WrongAnimal & operator=(const WrongAnimal & other);
-		
-		void makeSound() const;
-		std::string getType() const;
-};
+		Cat();
+		Cat & operator = (const Cat & originCat);
+		Cat(const Cat & originCat);
+		virtual ~Cat();
 
+		void makeSound() const;
+};

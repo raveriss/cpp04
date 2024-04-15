@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/11 16:26:05 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 13:07:48 by raveriss         ###   ########.fr       */
+/*   Created: 2024/04/11 16:29:14 by raveriss          #+#    #+#             */
+/*   Updated: 2024/04/15 14:02:56 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongCat.hpp"
+#include <iostream>
+
 /**
  * @brief Constructeur par défaut FragTrap
  */
-Dog::Dog() {
-    type = "Dog";
-    std::cout << "Dog constructor called" << std::endl;
+WrongCat::WrongCat() {
+    _type = "WrongCat";
+    std::cout << "WrongCat default constructor called" << std::endl;
 }
 
 /**
  * @brief Opérateur d'affectation FragTrap
  */
-Dog & Dog::operator = (const Dog & other)
-{
+WrongCat & WrongCat::operator = (const WrongCat & other) {
     if (this != & other) {
-        this->type = other.type;
+        this->_type = other._type;
     }
     return *this;
 }
@@ -33,18 +34,21 @@ Dog & Dog::operator = (const Dog & other)
 /**
  * @brief Constructeur de copie FragTrap
  */
-Dog::Dog(const Dog & other) : Animal(other) {}
+WrongCat::WrongCat(const WrongCat & other) : WrongAnimal(other) {
+    *this = other;
+    std::cout << "WrongCat copy constructor called" << std::endl;
+}
 
 /**
  * @brief Destructeur FragTrap
  */
-Dog::~Dog() {
-    std::cout << "Dog destructor called" << std::endl;
+WrongCat::~WrongCat() {
+    std::cout << "WrongCat destructor called" << std::endl;
 }
 
 /**
- * @brief Émission sonore spécifique Cat
+ * @brief Émission sonore spécifique WrongCat
  */
-void Dog::makeSound() const {
-    std::cout << "Woof" << std::endl;
+void WrongCat::makeSound() const {
+    std::cout << "This is a WrongCat sound!" << std::endl;
 }

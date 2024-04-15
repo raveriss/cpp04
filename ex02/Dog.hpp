@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/11 16:33:05 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 13:22:03 by raveriss         ###   ########.fr       */
+/*   Created: 2024/04/11 14:50:25 by raveriss          #+#    #+#             */
+/*   Updated: 2024/04/15 13:57:01 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
-#include <string>
+#include "Animal.hpp"
+#include "Brain.hpp"
 
 /**
- * @brief Classe WrongAnimal
- * @motclef classe, WrongAnimal, type, son non-polymorphique
+ * @brief Classe Dog, dérivée de Animal
+ * @motclef classe, héritage, Dog, Animal, son spécifique
  * @méthodes constructeur, destructeur, constructeur de copie, opérateur d'affectation,
- * émission sonore, accesseur type
+ * émission sonore spécifique
  */
-class WrongAnimal
+class Dog : public Animal
 {
-	protected:
-		std::string type;
-	public:
-		WrongAnimal();
-		virtual ~WrongAnimal();
-		WrongAnimal(const WrongAnimal & other);
-		WrongAnimal & operator=(const WrongAnimal & other);
-		
-		void makeSound() const;
-		std::string getType() const;
+    private:
+        Brain * _brain;
+    public:
+        Dog();
+        Dog & operator = (const Dog & other);
+        Dog(const Dog & other);
+        virtual ~Dog();
+
+        void makeSound() const;
 };
 

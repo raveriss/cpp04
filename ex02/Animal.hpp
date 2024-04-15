@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/11 16:33:05 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 13:22:03 by raveriss         ###   ########.fr       */
+/*   Created: 2024/04/11 14:46:25 by raveriss          #+#    #+#             */
+/*   Updated: 2024/04/15 16:04:07 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,28 @@
 #include <string>
 
 /**
- * @brief Classe WrongAnimal
- * @motclef classe, WrongAnimal, type, son non-polymorphique
- * @méthodes constructeur, destructeur, constructeur de copie, opérateur d'affectation,
+ * @brief Classe Animal
+ * @motclef classe, Animal, type, son, héritage, polymorphisme
+ * @méthodes constructeur, constructeur de copie, opérateur d'affectation, destructeur,
  * émission sonore, accesseur type
  */
-class WrongAnimal
+class Animal
 {
 	protected:
-		std::string type;
+		std::string _type;
 	public:
-		WrongAnimal();
-		virtual ~WrongAnimal();
-		WrongAnimal(const WrongAnimal & other);
-		WrongAnimal & operator=(const WrongAnimal & other);
+		Animal();
+		// Animal(const std::string& type);  // Constructeur paramétré
+		Animal(const Animal & );
+		Animal & operator=(const Animal & main_Animal);
+		virtual ~Animal();
+
 		
-		void makeSound() const;
+		virtual void makeSound() const = 0;
 		std::string getType() const;
 };
+
+
+
+
 

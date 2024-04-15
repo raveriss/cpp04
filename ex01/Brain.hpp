@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/11 14:50:37 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 13:52:26 by raveriss         ###   ########.fr       */
+/*   Created: 2024/04/15 13:24:53 by raveriss          #+#    #+#             */
+/*   Updated: 2024/04/15 15:28:30 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "Animal.hpp"
+#include <string>
+#include <iostream>
 
-
-/**
- * @brief Classe Cat, dérivée de Animal
- * @motclef classe, héritage, Cat, Animal, son spécifique
- * @méthodes constructeur, destructeur, constructeur de copie, opérateur d'affectation,
- * émission sonore spécifique
- */
-class Cat : public Animal
+class Brain
 {
 	private:
-		Brain * brain;
+		std::string _ideas[100];
 	public:
-		Cat();
-		~Cat();
-		Cat(const Cat & originCat);
-		Cat & operator = (const Cat & originCat);
-
-		void makeSound() const;
+		Brain();
+		Brain & operator = (const Brain & root);
+		Brain(const Brain & root);
+		~Brain();
+		
 };

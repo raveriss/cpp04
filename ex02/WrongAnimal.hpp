@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:33:05 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 13:22:03 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/15 14:02:43 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 class WrongAnimal
 {
 	protected:
-		std::string type;
+		std::string _type;
 	public:
 		WrongAnimal();
 		virtual ~WrongAnimal();
