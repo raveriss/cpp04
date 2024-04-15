@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 15:03:00 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 14:46:40 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/16 01:49:09 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Animal & Animal::operator = (const Animal & other)
 	if (this != & other) {
 		this->_type = other._type;
 	}
-	return *this;
+	return * this;
 }
 
 /**

@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 22:45:07 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/16 00:12:34 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/16 01:39:32 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ AMateria::~AMateria() {  // Définition
     // Le destructeur peut être vide mais doit être défini
 }
 
-void AMateria::use(ICharacter& target) {
+void AMateria::use(ICharacter & target) {
     // Implémentation par défaut, pourrait être vide ou imprimer un message d'erreur
     std::cout << "Using AMateria on " << target.getName() << std::endl;
 }

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main() {
-    char *ptr;
+    char * ptr;
 
     ptr = malloc(10 * sizeof(char));
     if (ptr != NULL) {

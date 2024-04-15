@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:33:55 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 22:41:31 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/16 01:52:50 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ class Cure : public AMateria {
 public:
     Cure();
     virtual ~Cure();
-    AMateria* clone() const;
-    void use(ICharacter& target);
+    AMateria * clone() const;
+    void use(ICharacter & target);
 };
 
 #endif

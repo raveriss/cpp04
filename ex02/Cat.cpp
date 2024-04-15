@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:26:56 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 14:51:50 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/16 01:41:20 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ Cat::Cat(const Cat & root) : Animal(root) {}
 Cat & Cat::operator = (const Cat & root)
 {
     std::cout << "Cat assignment operator called" << std::endl;
-    if (this != &root) {
+    if (this != & root) {
         Animal::operator=(root);
         if (_brain != NULL)
 		{

@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:26:05 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 14:27:13 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/16 01:40:04 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,10 @@ Dog::Dog(const Dog & other) : Animal(other)
 /**
  * @brief Opérateur d'affectation Dog
  */
-Dog& Dog::operator=(const Dog& other)
+Dog & Dog::operator=(const Dog & other)
 {
 	std::cout << "Dog assignment operator called" << std::endl;
-	if (this != &other)
+	if (this != & other)
 	{
 		Animal::operator=(other);
 		if (_brain != NULL)

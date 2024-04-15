@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:46:25 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 16:04:07 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/16 01:42:16 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ class Animal
 		std::string _type;
 	public:
 		Animal();
-		// Animal(const std::string& type);  // Constructeur paramétré
 		Animal(const Animal & );
 		Animal & operator=(const Animal & main_Animal);
 		virtual ~Animal();

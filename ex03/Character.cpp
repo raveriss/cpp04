@@ -6,13 +6,13 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 23:49:32 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 23:49:53 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/16 01:53:42 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 
-Character::Character(const std::string& name) : name(name) {
+Character::Character(const std::string & name) : name(name) {
     for (int i = 0; i < 4; ++i) {
         inventory[i] = NULL;
     }
@@ -25,11 +25,11 @@ Character::~Character() {
     }
 }
 
-std::string const &Character::getName() const {
+std::string const & Character::getName() const {
     return name;
 }
 
-void Character::equip(AMateria* m) {
+void Character::equip(AMateria * m) {
     for (int i = 0; i < 4; ++i) {
         if (inventory[i] == NULL) {
             inventory[i] = m;

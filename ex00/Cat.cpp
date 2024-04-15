@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:26:56 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 13:04:56 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/16 01:46:48 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ Cat & Cat::operator=(const Cat & other)
     if (this != & other) {
         this->type = other.type;
     }
-    return *this;
+    return * this;
 }
 
 /**

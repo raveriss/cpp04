@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:33:55 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 13:19:25 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/16 01:48:19 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ WrongAnimal & WrongAnimal::operator=(const WrongAnimal & other) {
     if (this != & other) {
         this->type = other.type;
     }
-    return *this;
+    return * this;
 }
 
 /**
  * @brief Constructeur de copie FragTrap
  */
 WrongAnimal::WrongAnimal(const WrongAnimal & other) {
-    *this = other;
+    * this = other;
     std::cout << "WrongAnimal copy constructor called" << std::endl;
 }
 

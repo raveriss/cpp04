@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 23:53:40 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 23:53:52 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/16 01:51:04 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ MateriaSource::~MateriaSource() {
     }
 }
 
-void MateriaSource::learnMateria(AMateria* m) {
+void MateriaSource::learnMateria(AMateria * m) {
     for (int i = 0; i < 4; i++) {
         if (materias[i] == NULL) {
             materias[i] = m;
@@ -33,7 +33,7 @@ void MateriaSource::learnMateria(AMateria* m) {
     }
 }
 
-AMateria* MateriaSource::createMateria(std::string const &type) {
+AMateria * MateriaSource::createMateria(std::string const & type) {
     for (int i = 0; i < 4; i++) {
         if (materias[i] && materias[i]->getType() == type) {
             return materias[i]->clone();
