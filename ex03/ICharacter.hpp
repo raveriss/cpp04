@@ -6,15 +6,16 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:34:14 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 18:36:13 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/16 00:06:31 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ICHARACTER_HPP
 #define ICHARACTER_HPP
 
-#include <string>
 #include "AMateria.hpp"
+class AMateria;  // Forward declaration
+
 
 class ICharacter {
 public:
