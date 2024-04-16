@@ -6,12 +6,11 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:37:48 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/16 01:45:33 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/16 02:02:05 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MATERIASOURCE_HPP
-#define MATERIASOURCE_HPP
+#pragma once
 
 #include "IMateriaSource.hpp"
 #include "AMateria.hpp"
@@ -29,5 +28,5 @@ public:
     AMateria * createMateria(std::string const & type);
 };
 
-#endif /* MATERIASOURCE_HPP */
+/*  MATERIASOURCE_HPP  */
 

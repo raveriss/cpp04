@@ -6,12 +6,11 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:36:43 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/16 01:53:27 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/16 02:03:38 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHARACTER_HPP
-#define CHARACTER_HPP
+#pragma once
 
 #include "ICharacter.hpp"
 #include <iostream>
@@ -31,5 +30,5 @@ public:
     virtual void use(int idx, ICharacter & target);
 };
 
-#endif
+/*  CHARACTER.HPP  */
 

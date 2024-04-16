@@ -6,12 +6,12 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:33:32 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/16 01:52:23 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/16 02:01:52 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-#define ICE_HPP
+#pragma once
+
 
 #include <iostream>
 #include "AMateria.hpp"
@@ -24,5 +24,5 @@ public:
     virtual void use(ICharacter & target);
 };
 
-#endif
+/*  ICE.HPP  */
 

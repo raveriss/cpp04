@@ -6,12 +6,11 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:32:40 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/16 01:53:56 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/16 02:04:06 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMATERIA_HPP
-#define AMATERIA_HPP
+#pragma once
 
 #include <string>
 #include <iostream>
@@ -32,5 +31,5 @@ class AMateria
         virtual void use(ICharacter & target);
 };
 
-#endif
+/*  AMATERIA.HPP  */
 

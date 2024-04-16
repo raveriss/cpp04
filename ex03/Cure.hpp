@@ -6,12 +6,11 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:33:55 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/16 01:52:50 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/16 02:02:59 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CURE_HPP
-#define CURE_HPP
+#pragma once
 
 #include <iostream>
 #include "AMateria.hpp"
@@ -24,5 +23,4 @@ public:
     void use(ICharacter & target);
 };
 
-#endif
-
+/*  CURE.HPP  */
