@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:37:48 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/16 02:02:05 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/16 02:15:31 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@
 #include "AMateria.hpp"
 #include <cstddef>
 
-class MateriaSource : public IMateriaSource {
-private:
-    AMateria * materias[4];
+class MateriaSource : public IMateriaSource
+{
+	private:
+		AMateria * materias[4];
+	public:
+		MateriaSource();
+		virtual ~MateriaSource();
 
-public:
-    MateriaSource();
-    virtual ~MateriaSource();
-
-    void learnMateria(AMateria * m);
-    AMateria * createMateria(std::string const & type);
+		void learnMateria(AMateria * m);
+		AMateria * createMateria(std::string const & type);
 };
 
 /*  MATERIASOURCE_HPP  */
