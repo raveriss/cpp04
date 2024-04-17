@@ -6,24 +6,37 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 22:45:07 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/16 01:39:32 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/17 22:38:40 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
-#include "ICharacter.hpp"  // Include here for the full definition
+#include "ICharacter.hpp"
 
+/**
+ * @brief Constructeur paramétré AMateria
+ */
 AMateria::AMateria(std::string const & type) : type(type) {}
 
+/**
+ * @brief Accesseur type AMateria
+ */
 std::string const & AMateria::getType() const {
     return type;
 }
 
-AMateria::~AMateria() {  // Définition
-    // Le destructeur peut être vide mais doit être défini
-}
+/**
+ * @brief Destructeur AMateria
+ */
+AMateria::~AMateria() {}
 
+/**
+ * @brief Utilisation AMateria sur cible
+ * @motclef méthode, utilisation, cible, message
+ * @action affiche utilisation sur cible
+ */
 void AMateria::use(ICharacter & target) {
-    // Implémentation par défaut, pourrait être vide ou imprimer un message d'erreur
     std::cout << "Using AMateria on " << target.getName() << std::endl;
 }
+
+/*  AMATERIA.CPP  */

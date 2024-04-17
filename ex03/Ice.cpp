@@ -6,24 +6,39 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 23:42:33 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/16 01:38:38 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/17 22:39:04 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
-#include "ICharacter.hpp"  // Include full definition of ICharacter here
+#include "ICharacter.hpp"
+
+/* Inclusion bibliothèque I/O standard */
 #include <iostream>
 
+
+/**
+ * @brief Constructeur par défaut Ice
+ */
 Ice::Ice() : AMateria("ice") {}
 
+/**
+ * @brief Destructeur Ice
+ */
 Ice::~Ice() {}
 
+/**
+ * @brief Clone Ice, crée copie de l'objet
+ */
 AMateria* Ice::clone() const {
     return new Ice();
 }
 
+/**
+ * @brief Utilisation de Ice sur cible
+ */
 void Ice::use(ICharacter & target) {
     std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }
 
-
+/*  ICE.CPP  */

@@ -6,16 +6,24 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:38:25 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/16 01:37:33 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/17 22:37:39 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Character.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
 #include "MateriaSource.hpp"
 
+/* Inclusion bibliothèque I/O standard */
+#include <iostream>
+
+/**
+ * @brief Fonction principale pour tester la gestion de matérias
+ * @motclef simulation, utilisation de matérias, création personnages, interactions
+ * @action crée source de matérias, apprend matérias, équipe personnages, utilise matérias,
+ * nettoie mémoire
+ */
 int main()
 {
     IMateriaSource * src = new MateriaSource();
@@ -41,3 +49,5 @@ int main()
 
     return 0;
 }
+
+/*  MAIN.CPP  */

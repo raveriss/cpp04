@@ -6,16 +6,25 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:34:14 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/16 02:14:01 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/17 22:23:34 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICHARACTER_HPP
-#define ICHARACTER_HPP
+#pragma once
 
 #include "AMateria.hpp"
+
+/**
+ * @brief Déclaration anticipée de AMateria
+ */
 class AMateria;  // Forward declaration
 
+/**
+ * @brief Interface ICharacter
+ * @motclef interface, ICharacter, interactions avec AMateria
+ * @méthodes destructeur virtuel, obtenir nom, équiper AMateria, déséquiper AMateria,
+ * utiliser AMateria sur cible
+ */
 class ICharacter
 {
     public:
@@ -26,4 +35,4 @@ class ICharacter
         virtual void use(int idx, ICharacter & target) = 0;
 };
 
-#endif /* ICHARACTER_HPP */
+/* ICHARACTER_HPP */
