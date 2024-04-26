@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:50:37 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 13:52:26 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/26 21:40:21 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@
  */
 class Cat : public Animal
 {
-	private:
-		Brain * brain;
 	public:
 		Cat();
 		~Cat();

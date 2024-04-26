@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:46:25 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/16 01:44:33 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/04/26 21:39:25 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 #include <iostream>
 #include <string>
-#include "Brain.hpp"
 
 /**
  * @brief Classe Animal
