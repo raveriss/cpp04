@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:46:25 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/16 01:43:53 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/02 11:47:17 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Animal
 	public:
 		Animal();
 		Animal(const Animal & main_Animal);
-		Animal & operator=(const Animal & main_Animal);
+		Animal & operator = (const Animal & main_Animal);
 		virtual ~Animal();
 
 		
