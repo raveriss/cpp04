@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 23:42:33 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/17 22:39:04 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/03 14:58:54 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,30 @@
 /* Inclusion bibliothèque I/O standard */
 #include <iostream>
 
-
 /**
  * @brief Constructeur par défaut Ice
  */
 Ice::Ice() : AMateria("ice") {}
+
+/**
+ * @brief Constructeur de copie Ice
+ * 
+ * @param rootIce 
+ */
+Ice::Ice(const Ice & rootIce) : AMateria(rootIce) {}
+
+/**
+ * @brief Opérateur d'affectation
+ * 
+ * @param rootIce 
+ * @return Ice& 
+ */
+Ice & Ice::operator = (const Ice & rootIce)
+{
+    if (this != &rootIce)
+        AMateria::operator = (rootIce);
+    return *this;
+}
 
 /**
  * @brief Destructeur Ice
@@ -30,7 +49,7 @@ Ice::~Ice() {}
 /**
  * @brief Clone Ice, crée copie de l'objet
  */
-AMateria* Ice::clone() const {
+AMateria * Ice::clone() const {
     return new Ice();
 }
 

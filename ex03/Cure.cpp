@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 22:40:59 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/17 22:44:41 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/03 13:55:00 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,27 @@
  * @brief Constructeur par défaut Cure
  */
 Cure::Cure() : AMateria("cure") {}
+
+
+/**
+ * @brief Constructeur de copie Cure
+ * 
+ * @param rootCure 
+ */
+Cure::Cure(const Cure & rootCure) : AMateria(rootCure) {}
+
+/**
+ * @brief Opérateur d'affectation
+ * 
+ * @param rootCure 
+ * @return Cure& 
+ */
+Cure & Cure::operator = (const Cure & rootCure)
+{
+    if (this != & rootCure)
+        AMateria::operator = (rootCure);
+    return *this;
+}
 
 /**
  * @brief Destructeur Cure

@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:32:40 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/17 22:35:32 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/03 13:14:41 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,19 @@ class AMateria
 	protected:
 		std::string type;
 	public:
+		/*  Constructeur par défaut  */
+		AMateria();
+		
+		/*  Constructeur paramétré  */
 		AMateria(std::string const & type);
+
+		/*  Constructeur de recopie  */
+		AMateria(const AMateria & other);
+		
+		/*  Opérateur d’affectation  */
+		AMateria & operator = (const AMateria & other);
+
+		/*  Desctructor  */
 		virtual ~AMateria();
 
 		std::string const & getType() const;

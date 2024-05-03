@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:33:32 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/17 22:39:17 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/03 14:25:57 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,18 @@
 class Ice : public AMateria
 {
 	public:
+		/*  Constructeur par défaut  */
 		Ice();
+
+		/*  Constructeur de recopie  */
+		Ice(const Ice & rootIce);
+
+		/*  Opérateur d’affectation  */
+		Ice & operator = (const Ice & rootIce);
+
+		/*  Desctructor  */
 		virtual ~Ice();
+
 		virtual AMateria * clone() const;
 		virtual void use(ICharacter & target);
 };

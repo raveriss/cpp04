@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:36:43 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/17 22:36:05 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/03 13:25:47 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,21 @@ class Character : public ICharacter
 		std::string name;
 		AMateria * inventory[4];  // Tableau de pointeurs de type AMateria
 	public:
+		/*  Constructeur par défaut  */
+		Character();
+
+		/*  Constructeur paramétré  */
 		Character(const std::string & name);
+
+		/*  Constructeur de recopie  */
+		Character(const Character & rootCharacter);
+
+		/*  Opérateur d’affectation  */
+		Character & operator = (const Character & rootCharacter);
+
+		/*  Desctructor  */
 		virtual ~Character();
+
 		virtual std::string const & getName() const;
 		virtual void equip(AMateria * m);
 		virtual void unequip(int idx);

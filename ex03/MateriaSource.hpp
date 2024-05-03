@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:37:48 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/17 22:37:55 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/03 15:20:27 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,22 @@ class MateriaSource : public IMateriaSource
 	private:
 		AMateria * materias[4];
 	public:
+		/*  Constructeur par défaut  */
 		MateriaSource();
+
+		/*  Constructeur de recopie  */
+		MateriaSource(const MateriaSource & rootMateriaSource);
+
+		/*  Opérateur d’affectation  */
+		MateriaSource & operator = (const MateriaSource & rootMateriaSource);
+
+		/*  Desctructor  */
 		virtual ~MateriaSource();
 
 		void learnMateria(AMateria * m);
 		AMateria * createMateria(std::string const & type);
+		
+		bool isEmpty() const;
 };
 
 /*  MATERIASOURCE_HPP  */

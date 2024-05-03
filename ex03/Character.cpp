@@ -6,11 +6,19 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 23:49:32 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/17 22:28:50 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/03 13:29:21 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
+
+
+Character::Character() : name("") {
+    for (int i = 0; i < 4; ++i) {
+        inventory[i] = NULL;
+    }
+}
+	
 
 /**
  * @brief Constructeur paramétré Character avec initialisation
@@ -21,13 +29,35 @@ Character::Character(const std::string & name) : name(name) {
 	}
 }
 
+Character::Character(const Character& other) : name(other.name) {
+    for (int i = 0; i < 4; ++i) {
+        inventory[i] = other.inventory[i] ? other.inventory[i]->clone() : NULL;
+    }
+}
+
+Character& Character::operator=(const Character& other) {
+    if (this != &other) {
+        name = other.name;
+        for (int i = 0; i < 4; ++i) {
+            delete inventory[i];
+            inventory[i] = other.inventory[i] ? other.inventory[i]->clone() : NULL;
+        }
+    }
+    return *this;
+}
+
 /**
  * @brief Destructeur Character
  */
 Character::~Character() {
-	for (int i = 0; i < 4; ++i) {
-		delete inventory[i];
-		inventory[i] = NULL;
+	for (int i = 0; i < 4; ++i)
+	{
+		if (inventory[i] != NULL)
+		{
+			delete inventory[i];
+			inventory[i] = NULL;
+		}
+
 	}
 }
 

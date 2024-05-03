@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:33:55 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/17 22:41:46 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/03 13:56:55 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,18 @@
 class Cure : public AMateria
 {
 	public:
+		/*  Constructeur par défaut  */
 		Cure();
+
+		/*  Constructeur de recopie  */
+		Cure(const Cure & rootCure);
+
+		/*  Opérateur d’affectation  */
+		Cure & operator = (const Cure & rootCure);
+
+		/*  Desctructor  */
 		virtual ~Cure();
+
 		AMateria * clone() const;
 		void use(ICharacter & target);
 };
