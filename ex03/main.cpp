@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:38:25 by raveriss          #+#    #+#             */
-/*   Updated: 2024/05/03 17:49:33 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/03 19:35:52 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,10 @@
  */
 int main()
 {
-
+	
+	/*
+	* TEST MANDATORY
+	*/
 	{
 		std::cout << std::endl << CYAN << "MANDATORY" << NC << std::endl;
 		IMateriaSource* src = new MateriaSource();
@@ -67,6 +70,10 @@ int main()
 		delete me;
 		delete src;
 	}
+	
+	/*
+	* TEST UNEQUIP 1
+	*/
 	{
 		std::cout << std::endl << CYAN << "TEST UNEQUIP" << NC << std::endl;
 		
@@ -107,6 +114,10 @@ int main()
 		delete bob;
 		delete src;
 	}
+	
+	/*
+	* TEST UNEQUIP 2
+	*/
 	{
 		std::cout << std::endl << CYAN << "TEST UNEQUIP 2" << NC << std::endl;
 		const int ICE_SLOT = 0;
@@ -167,6 +178,10 @@ int main()
 			cureMateria = NULL;
 		}
 	}
+
+	/*
+	* TEST ASSIGNATION
+	*/
 	{
 		std::cout << std::endl << CYAN << "TEST ASSIGNATION" << NC << std::endl;
 		AMateria* ice = new Ice;
@@ -190,6 +205,9 @@ int main()
 		delete spellbook;
 	}
 
+	/*
+	* TEST MATERIA
+	*/
 	{
 		std::cout << std::endl << CYAN << "TEST MATERIA SOURCE INITIALIZATION AND ASSIGNMENT" << NC << std::endl;
 
@@ -207,7 +225,9 @@ int main()
 		std::cout << "MateriaSource assignment operator test OK" << std::endl;
 	}
 
-	// Test pour Cure
+	/*
+	* TEST CURE
+	*/
 	{
     	std::cout << std::endl << CYAN << "TEST CURE CLASS CONSTRUCTORS AND ASSIGNMENT" << NC << std::endl;
 
@@ -225,7 +245,9 @@ int main()
 		std::cout << "Cure assignment operator test OK" << std::endl;
 	}
 
-	// Test pour Ice
+	/*
+	* TEST ICE
+	*/
 	{
 	    std::cout << std::endl << CYAN << "TEST ICE CLASS CONSTRUCTORS AND ASSIGNMENT" << NC << std::endl;
 
@@ -243,7 +265,9 @@ int main()
 		std::cout << "Ice assignment operator test OK" << std::endl;
 	}
 
-	// Test pour Character
+	/*
+	* TEST CHARACTER
+	*/
 	{
 		std::cout << std::endl << CYAN << "TEST CHARACTER CLASS CONSTRUCTORS AND ASSIGNMENT" << NC << std::endl;
 		

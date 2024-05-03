@@ -6,14 +6,14 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 23:49:32 by raveriss          #+#    #+#             */
-/*   Updated: 2024/05/03 13:29:21 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/03 19:24:41 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 
 
-Character::Character() : name("") {
+Character::Character() : name("Default") {
     for (int i = 0; i < 4; ++i) {
         inventory[i] = NULL;
     }
