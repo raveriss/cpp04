@@ -6,20 +6,21 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 23:49:32 by raveriss          #+#    #+#             */
-/*   Updated: 2024/05/03 19:24:41 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/04 20:50:29 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 
-
+/**
+ * @brief Constructeur par défaut Character
+ */
 Character::Character() : name("Default") {
     for (int i = 0; i < 4; ++i) {
         inventory[i] = NULL;
     }
 }
 	
-
 /**
  * @brief Constructeur paramétré Character avec initialisation
  */
@@ -29,13 +30,24 @@ Character::Character(const std::string & name) : name(name) {
 	}
 }
 
+/**
+ * @brief Constructeur de Recopie
+ * 
+ * @param other 
+ */
 Character::Character(const Character& other) : name(other.name) {
     for (int i = 0; i < 4; ++i) {
         inventory[i] = other.inventory[i] ? other.inventory[i]->clone() : NULL;
     }
 }
 
-Character& Character::operator=(const Character& other) {
+/**
+ * @brief Opérateur d’Affectation
+ * 
+ * @param other 
+ * @return AMateria& 
+ */
+Character& Character::operator = (const Character & other) {
     if (this != &other) {
         name = other.name;
         for (int i = 0; i < 4; ++i) {

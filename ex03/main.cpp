@@ -6,12 +6,9 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:38:25 by raveriss          #+#    #+#             */
-/*   Updated: 2024/05/03 19:35:52 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/04 20:56:53 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
-
 
 #include <iostream>
 #include <cassert>
@@ -26,7 +23,6 @@
 #define ASSERT_TEST(passed, message) \
 	if (passed) { std::cout << GREEN << "TEST PASSED" << NC << std::endl; } \
 	else { std::cout << RED << "TEST FAILED: " << message << NC << std::endl; }
-
 
 #define GREY		"\033[0;30m"
 #define RED			"\033[0;31m"
@@ -284,6 +280,7 @@ int main()
 		ASSERT_TEST(charAssigned.getName() == "Default", "Assigned Character should have the copied name");
 		std::cout << "Character assignment operator test OK" << std::endl;
 	}
+
 	std::cout << std::endl << "All tests executed." << std::endl;	
 
 	return 0;

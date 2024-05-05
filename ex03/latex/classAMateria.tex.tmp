@@ -1,0 +1,99 @@
+\hypertarget{classAMateria}{}\doxysection{AMateria Class Reference}
+\label{classAMateria}\index{AMateria@{AMateria}}
+
+
+Classe de base \mbox{\hyperlink{classAMateria}{AMateria}} @motclef classe, \mbox{\hyperlink{classAMateria}{AMateria}}, matéria, polymorphisme, abstraction @attribut type @méthodes constructeur paramétré, destructeur, accesseur type, clone, utilisation.  
+
+
+
+
+{\ttfamily \#include $<$AMateria.\+hpp$>$}
+
+
+
+Inheritance diagram for AMateria\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAMateria_aa579a7983248f4999620a811259cf544}\label{classAMateria_aa579a7983248f4999620a811259cf544}} 
+\mbox{\hyperlink{classAMateria_aa579a7983248f4999620a811259cf544}{AMateria}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut \mbox{\hyperlink{classAMateria}{AMateria}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAMateria_a32b78bb5e1e8dc5ba04f40931d27659b}\label{classAMateria_a32b78bb5e1e8dc5ba04f40931d27659b}} 
+\mbox{\hyperlink{classAMateria_a32b78bb5e1e8dc5ba04f40931d27659b}{AMateria}} (std\+::string const \&type)
+\begin{DoxyCompactList}\small\item\em Constructeur paramétré \mbox{\hyperlink{classAMateria}{AMateria}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAMateria_af51ca5a758c4ffcf8b399176eb626ff8}{AMateria}} (const \mbox{\hyperlink{classAMateria}{AMateria}} \&other)
+\begin{DoxyCompactList}\small\item\em Constructeur de Recopie. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAMateria}{AMateria}} \& \mbox{\hyperlink{classAMateria_a607ad45886eca30809666bc2ee4e2928}{operator=}} (const \mbox{\hyperlink{classAMateria}{AMateria}} \&other)
+\begin{DoxyCompactList}\small\item\em Opérateur d’\+Affectation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAMateria_a4b17ac77a06fc4b3f2291a30aba63059}\label{classAMateria_a4b17ac77a06fc4b3f2291a30aba63059}} 
+virtual \mbox{\hyperlink{classAMateria_a4b17ac77a06fc4b3f2291a30aba63059}{$\sim$\+AMateria}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur \mbox{\hyperlink{classAMateria}{AMateria}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAMateria_a81b242170ca42a10778a0e3a01454c1c}\label{classAMateria_a81b242170ca42a10778a0e3a01454c1c}} 
+std\+::string const  \& \mbox{\hyperlink{classAMateria_a81b242170ca42a10778a0e3a01454c1c}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur type \mbox{\hyperlink{classAMateria}{AMateria}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAMateria_ada8258c48efc907fc80e690003939823}\label{classAMateria_ada8258c48efc907fc80e690003939823}} 
+virtual \mbox{\hyperlink{classAMateria}{AMateria}} $\ast$ {\bfseries clone} () const =0
+\item 
+\mbox{\Hypertarget{classAMateria_a88530ad68c18bf972d1c1f1fa894dd0f}\label{classAMateria_a88530ad68c18bf972d1c1f1fa894dd0f}} 
+virtual void \mbox{\hyperlink{classAMateria_a88530ad68c18bf972d1c1f1fa894dd0f}{use}} (\mbox{\hyperlink{classICharacter}{ICharacter}} \&target)
+\begin{DoxyCompactList}\small\item\em Utilisation \mbox{\hyperlink{classAMateria}{AMateria}} sur cible @motclef méthode, utilisation, cible, message @action affiche utilisation sur cible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAMateria_af25f7b6eaa592e4ea01ac674eca0df7c}\label{classAMateria_af25f7b6eaa592e4ea01ac674eca0df7c}} 
+std\+::string {\bfseries type}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe de base \mbox{\hyperlink{classAMateria}{AMateria}} @motclef classe, \mbox{\hyperlink{classAMateria}{AMateria}}, matéria, polymorphisme, abstraction @attribut type @méthodes constructeur paramétré, destructeur, accesseur type, clone, utilisation. 
+
+\begin{DoxyNote}{Note}
+clone est une méthode virtuelle pure pour duplication polymorphique 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAMateria_af51ca5a758c4ffcf8b399176eb626ff8}\label{classAMateria_af51ca5a758c4ffcf8b399176eb626ff8}} 
+\index{AMateria@{AMateria}!AMateria@{AMateria}}
+\index{AMateria@{AMateria}!AMateria@{AMateria}}
+\doxysubsubsection{\texorpdfstring{AMateria()}{AMateria()}}
+{\footnotesize\ttfamily AMateria\+::\+AMateria (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAMateria}{AMateria}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Constructeur de Recopie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAMateria_a607ad45886eca30809666bc2ee4e2928}\label{classAMateria_a607ad45886eca30809666bc2ee4e2928}} 
+\index{AMateria@{AMateria}!operator=@{operator=}}
+\index{operator=@{operator=}!AMateria@{AMateria}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAMateria}{AMateria}} \& AMateria\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAMateria}{AMateria}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Opérateur d’\+Affectation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classAMateria}{AMateria}}\& 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+AMateria.\+hpp\item 
+AMateria.\+cpp\end{DoxyCompactItemize}

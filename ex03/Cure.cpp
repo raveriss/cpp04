@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 22:40:59 by raveriss          #+#    #+#             */
-/*   Updated: 2024/05/03 13:55:00 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/05 00:42:48 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
  * @brief Constructeur par défaut Cure
  */
 Cure::Cure() : AMateria("cure") {}
-
 
 /**
  * @brief Constructeur de copie Cure
