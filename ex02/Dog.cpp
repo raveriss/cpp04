@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:26:05 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/16 01:40:04 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/07 00:36:05 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,13 @@ Dog & Dog::operator=(const Dog & other)
 	return *this;
 }
 
-
-
 /**
  * @brief Émission sonore spécifique Dog
  */
 void Dog::makeSound() const {
 	std::cout << "Woof" << std::endl;
+}
+
+Brain* Dog::getBrain() const {
+    return _brain;
 }

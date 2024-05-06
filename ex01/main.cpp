@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:48:21 by raveriss          #+#    #+#             */
-/*   Updated: 2024/05/06 21:19:59 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/07 00:38:36 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,7 @@ int main() {
 	std::cout << "After changing, copyDog Dog Idea: " << copyDog.getBrain()->getIdea(0) << std::endl;
 	std::cout << "After changing, copyCat Cat Idea: " << copyCat.getBrain()->getIdea(0) << std::endl;
 
-	std::cout << std::endl << std::endl;
-
+	std::cout << std::endl;
 
 	return 0;
 }

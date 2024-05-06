@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:50:25 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 13:57:01 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/07 00:36:29 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,15 @@
  */
 class Dog : public Animal
 {
-    private:
-        Brain * _brain;
-    public:
-        Dog();
-        Dog & operator = (const Dog & other);
-        Dog(const Dog & other);
-        virtual ~Dog();
+	private:
+		Brain * _brain;
+	public:
+		Dog();
+		Dog & operator = (const Dog & other);
+		Dog(const Dog & other);
+		virtual ~Dog();
 
-        void makeSound() const;
+		void makeSound() const;
+		Brain* getBrain() const;
 };
 

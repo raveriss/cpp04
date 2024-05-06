@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:50:37 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 13:56:51 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/07 00:34:51 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,5 @@ class Cat : public Animal
 		virtual ~Cat();
 
 		void makeSound() const;
+		Brain* getBrain() const;
 };
