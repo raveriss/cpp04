@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:38:25 by raveriss          #+#    #+#             */
-/*   Updated: 2024/05/06 13:39:40 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/06 14:49:50 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,7 +153,6 @@ int main()
 		ASSERT_TEST(srcAssigned.isEmpty(), "Assigned MateriaSource should be empty");
 		std::cout << "MateriaSource assignment operator test OK" << std::endl;
 	}
-
 
 	/*
 	* TEST CURE
