@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:26:56 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/16 01:50:03 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/06 21:00:50 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,12 @@ Cat::~Cat()
 /**
  * @brief Constructeur de copie Cat
  */
-Cat::Cat(const Cat & root) : Animal(root) {}
+Cat::Cat(const Cat & originCat) : Animal(originCat)
+{
+	_brain = new Brain(*originCat._brain);
+    std::cout << "Cat copy constructor called" << std::endl;
+}
+
 
 /**
  * @brief Opérateur d'affectation Cat
@@ -64,4 +69,8 @@ Cat & Cat::operator = (const Cat & root)
 void Cat::makeSound() const
 {
 	std::cout << "Miaou" << std::endl;
+}
+
+Brain* Cat::getBrain() const {
+    return _brain;
 }
