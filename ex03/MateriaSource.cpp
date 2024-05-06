@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 23:53:40 by raveriss          #+#    #+#             */
-/*   Updated: 2024/05/03 15:20:38 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/06 13:23:20 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ MateriaSource::MateriaSource() {
     }
 }
 
-
 MateriaSource::MateriaSource(const MateriaSource & rootMateriaSource) {
     for (int i = 0; i < 4; ++i) {
         if (rootMateriaSource.materias[i] != NULL)
@@ -30,7 +29,6 @@ MateriaSource::MateriaSource(const MateriaSource & rootMateriaSource) {
             this->materias[i] = NULL;
     }
 }
-
 
 MateriaSource& MateriaSource::operator=(const MateriaSource& other) {
     if (this != &other) {
@@ -41,7 +39,6 @@ MateriaSource& MateriaSource::operator=(const MateriaSource& other) {
     }
     return *this;
 }
-
 
 /**
  * @brief Destructeur MateriaSource

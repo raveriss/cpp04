@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 23:49:32 by raveriss          #+#    #+#             */
-/*   Updated: 2024/05/04 20:50:29 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/06 11:38:13 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void Character::equip(AMateria * m) {
 	for (int i = 0; i < 4; ++i) {
 		if (inventory[i] == NULL) {
 			inventory[i] = m;
-			break;
+			return;
 		}
 	}
 }
@@ -108,6 +108,13 @@ void Character::use(int idx, ICharacter& target) {
 	if (idx >= 0 && idx < 4 && inventory[idx] != NULL) {
 		inventory[idx]->use(target);
 	}
+}
+
+AMateria* Character::getMateria(int idx) const {
+    if (idx >= 0 && idx < 4) {
+        return inventory[idx];
+    }
+    return NULL; // Retourne nullptr si l'index est hors limites ou si la slot est vide
 }
 
 /*  CHARACTER.CPP  */

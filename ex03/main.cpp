@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:38:25 by raveriss          #+#    #+#             */
-/*   Updated: 2024/05/04 20:56:53 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/06 13:39:40 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 #include "MateriaSource.hpp"
 #include "ICharacter.hpp"
 #include "Character.hpp"
+#include <cstdio>
 
 #define ASSERT_TEST(passed, message) \
 	if (passed) { std::cout << GREEN << "TEST PASSED" << NC << std::endl; } \
@@ -41,6 +42,8 @@
  */
 int main()
 {
+	
+
 	
 	/*
 	* TEST MANDATORY
@@ -66,56 +69,12 @@ int main()
 		delete me;
 		delete src;
 	}
-	
+
 	/*
-	* TEST UNEQUIP 1
+	* TEST UNEQUIP
 	*/
 	{
 		std::cout << std::endl << CYAN << "TEST UNEQUIP" << NC << std::endl;
-		
-		IMateriaSource* src = new MateriaSource();
-
-		src->learnMateria(new Ice());
-		src->learnMateria(new Cure());
-		
-		ICharacter* me = new Character("me");
-		
-		AMateria* tmp;
-		AMateria* tmp2;
-		tmp = src->createMateria("ice");
-		me->equip(tmp);
-		tmp2 = src->createMateria("cure");
-		me->equip(tmp2);
-		
-		ICharacter* bob = new Character("bob");
-		me->use(0, *bob);
-		me->use(1, *bob);
-
-		AMateria *onGround;
-		me->unequip(0);
-		onGround = tmp;
-		// onGround = NULL; <--- test d'erreur
-		ASSERT_TEST(onGround == tmp, "Unequip should not delete Materia");
-
-		delete onGround;
-		
-		AMateria *onGround2;
-		me->unequip(1);
-		onGround2 = tmp2;
-		ASSERT_TEST(onGround2 == tmp2, "Unequip should not delete Materia");
-
-		delete onGround2;
-
-		delete me;
-		delete bob;
-		delete src;
-	}
-	
-	/*
-	* TEST UNEQUIP 2
-	*/
-	{
-		std::cout << std::endl << CYAN << "TEST UNEQUIP 2" << NC << std::endl;
 		const int ICE_SLOT = 0;
 		const int CURE_SLOT = 1;
 		const int SECOND_ICE_SLOT = 2;
@@ -176,32 +135,6 @@ int main()
 	}
 
 	/*
-	* TEST ASSIGNATION
-	*/
-	{
-		std::cout << std::endl << CYAN << "TEST ASSIGNATION" << NC << std::endl;
-		AMateria* ice = new Ice;
-		AMateria* cure = new Cure;
-
-		IMateriaSource* spellbook = new MateriaSource();
-		spellbook->learnMateria(ice);
-		spellbook->learnMateria(cure);
-		
-		AMateria* learnings;
-		learnings = spellbook->createMateria("cure");
-		ICharacter* hero = new Character("Staf");
-		hero->equip(spellbook->createMateria("ice"));
-		hero->equip(learnings);
-		hero->use(1, *hero);
-		hero->use(0, *hero);
-
-		ASSERT_TEST(hero->getName() == "Staf", "Character name should match");
-
-		delete hero;
-		delete spellbook;
-	}
-
-	/*
 	* TEST MATERIA
 	*/
 	{
@@ -220,6 +153,7 @@ int main()
 		ASSERT_TEST(srcAssigned.isEmpty(), "Assigned MateriaSource should be empty");
 		std::cout << "MateriaSource assignment operator test OK" << std::endl;
 	}
+
 
 	/*
 	* TEST CURE
@@ -281,6 +215,58 @@ int main()
 		std::cout << "Character assignment operator test OK" << std::endl;
 	}
 
+	/*
+	* MATERIAL INVENTORY TEST
+	*/
+	{
+		std::cout << std::endl << CYAN << "MATERIAL INVENTORY TEST" << NC << std::endl;
+
+		MateriaSource source;
+		source.learnMateria(new Ice());
+		source.learnMateria(new Cure());
+
+		Character character("Hero");
+
+		// Test l'équipement de Materia dans les emplacements vides dans l'ordre
+		AMateria* ice = source.createMateria("ice");
+		AMateria* cure = source.createMateria("cure");
+		AMateria* extraIce = source.createMateria("ice");
+		AMateria* overflow = source.createMateria("cure");
+		AMateria* fifthMateria = source.createMateria("ice"); // Cinquième Materia pour tester l'inventaire plein
+
+		character.equip(ice);       // Doit aller dans le slot 0
+		character.equip(cure);      // Doit aller dans le slot 1
+		character.equip(extraIce);  // Doit aller dans le slot 2
+		character.equip(overflow);  // Devrait aller dans le slot 3
+
+		ASSERT_TEST(character.getMateria(0) == ice, "Ice should be in slot 0");
+		ASSERT_TEST(character.getMateria(1) == cure, "Cure should be in slot 1");
+		ASSERT_TEST(character.getMateria(2) == extraIce, "Extra ice should be in slot 2");
+		ASSERT_TEST(character.getMateria(3) == overflow, "Overflow cure should be in slot 3");
+
+		// Tenter d'équiper une cinquième Materia quand l'inventaire est plein
+		character.equip(fifthMateria);
+		ASSERT_TEST(character.getMateria(4) == NULL, "No fifth slot should be available");
+
+		// Test l'utilisation d'une Materia inexistante
+		character.use(4, character);  // Ne devrait rien faire, slot inexistant
+
+		// Test de déséquipement de Materia inexistante
+		character.unequip(4);  // Ne devrait rien faire, slot inexistant
+
+		// Nettoyage
+		character.unequip(0); // Déséquiper ice
+		character.unequip(1); // Déséquiper cure
+		character.unequip(2); // Déséquiper extra ice
+		character.unequip(3); // Déséquiper overflow
+
+		delete ice;
+		delete cure;
+		delete extraIce;
+		delete overflow;
+		delete fifthMateria; // Cinquième Materia jamais équipée doit être supprimée manuellement
+	}
+	
 	std::cout << std::endl << "All tests executed." << std::endl;	
 
 	return 0;

@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:33:55 by raveriss          #+#    #+#             */
-/*   Updated: 2024/05/03 13:56:55 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/06 13:43:49 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Cure : public AMateria
 		Cure & operator = (const Cure & rootCure);
 
 		/*  Desctructor  */
-		virtual ~Cure();
+		~Cure();
 
 		AMateria * clone() const;
 		void use(ICharacter & target);

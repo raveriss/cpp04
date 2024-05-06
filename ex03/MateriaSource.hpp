@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:37:48 by raveriss          #+#    #+#             */
-/*   Updated: 2024/05/03 15:20:27 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/06 13:46:56 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ class MateriaSource : public IMateriaSource
 		MateriaSource & operator = (const MateriaSource & rootMateriaSource);
 
 		/*  Desctructor  */
-		virtual ~MateriaSource();
+		~MateriaSource();
 
 		void learnMateria(AMateria * m);
 		AMateria * createMateria(std::string const & type);

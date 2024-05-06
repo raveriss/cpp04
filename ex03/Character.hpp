@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:36:43 by raveriss          #+#    #+#             */
-/*   Updated: 2024/05/03 13:25:47 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/06 13:45:19 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,14 @@ class Character : public ICharacter
 		Character & operator = (const Character & rootCharacter);
 
 		/*  Desctructor  */
-		virtual ~Character();
+		~Character();
 
-		virtual std::string const & getName() const;
-		virtual void equip(AMateria * m);
-		virtual void unequip(int idx);
-		virtual void use(int idx, ICharacter & target);
+		std::string const & getName() const;
+		void equip(AMateria * m);
+		void unequip(int idx);
+		void use(int idx, ICharacter & target);
+		AMateria* getMateria(int idx) const;
+
 };
 
 /*  CHARACTER.HPP  */
