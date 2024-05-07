@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 15:03:00 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 13:58:12 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/07 01:20:46 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,3 @@ std::string Animal::getType() const
 { 
 	return type;
 }
-
-
-
-

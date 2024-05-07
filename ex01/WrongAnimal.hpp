@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:33:05 by raveriss          #+#    #+#             */
-/*   Updated: 2024/05/02 11:47:29 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/07 01:23:29 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,3 @@ class WrongAnimal
 		void makeSound() const;
 		std::string getType() const;
 };
-

@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:46:25 by raveriss          #+#    #+#             */
-/*   Updated: 2024/05/02 11:47:17 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/07 01:22:40 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,3 @@ class Animal
 		virtual void makeSound() const;
 		std::string getType() const;
 };
-
-
-
-
-

@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:50:25 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 13:52:45 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/07 01:21:23 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@
  */
 class Dog : public Animal
 {
-    public:
-        Dog();
-        ~Dog();
-        Dog(const Dog & other);
-        Dog & operator = (const Dog & other);
+	public:
+		Dog();
+		~Dog();
+		Dog(const Dog & other);
+		Dog & operator = (const Dog & other);
 
-        void makeSound() const;
+		void makeSound() const;
 };
 
