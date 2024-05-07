@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:48:21 by raveriss          #+#    #+#             */
-/*   Updated: 2024/05/07 02:14:57 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/07 02:28:00 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int main() {
 	std::cout << std::endl << CYAN << "/*  ORIGINAL AND COPY IDEAS  */\n" << NC;
 
 	std::cout << "Original Dog Idea: " << originalDog.getBrain()->getIdea(0) << std::endl;
-	std::cout << "    Copy Dog Idea: " << copyDog.getBrain()->getIdea(0) << std::endl;
+	std::cout << "    Copy Dog Idea: " << copyDog.getBrain()->getIdea(0) << std::endl << std::endl;
 
 	std::cout << "Original Cat Idea: " << originalCat.getBrain()->getIdea(0) << std::endl;
 	std::cout << "    Copy Cat Idea: " << copyCat.getBrain()->getIdea(0) << std::endl;
@@ -82,7 +82,7 @@ int main() {
 	copyCat.getBrain()->setIdea(0, "Chase mice");
 
 	std::cout << "After changing copyDog, Original Dog Idea: " << originalDog.getBrain()->getIdea(0) << std::endl;
-	std::cout << "After changing copyDog,  CopyDog Dog Idea: " << copyDog.getBrain()->getIdea(0) << std::endl;
+	std::cout << "After changing copyDog,  CopyDog Dog Idea: " << copyDog.getBrain()->getIdea(0) << std::endl << std::endl;
 	std::cout << "After changing copyCat, Original Cat Idea: " << originalCat.getBrain()->getIdea(0) << std::endl;
 	std::cout << "After changing copyCat,  CopyCat Cat Idea: " << copyCat.getBrain()->getIdea(0) << std::endl;
 
