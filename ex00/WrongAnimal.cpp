@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:33:55 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/16 01:48:19 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/08 19:21:40 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 #include <iostream>
 
 /**
- * @brief Constructeur par défaut FragTrap
+ * @brief Constructeur par défaut WrongAnimal
  */
 WrongAnimal::WrongAnimal() : type("WrongAnimal") {
     std::cout << "WrongAnimal default constructor called" << std::endl;
 }
 
 /**
- * @brief Opérateur d'affectation FragTrap
+ * @brief Opérateur d'affectation WrongAnimal
  */
 WrongAnimal & WrongAnimal::operator=(const WrongAnimal & other) {
     if (this != & other) {
@@ -31,7 +31,7 @@ WrongAnimal & WrongAnimal::operator=(const WrongAnimal & other) {
 }
 
 /**
- * @brief Constructeur de copie FragTrap
+ * @brief Constructeur de copie WrongAnimal
  */
 WrongAnimal::WrongAnimal(const WrongAnimal & other) {
     * this = other;
@@ -53,7 +53,7 @@ std::string WrongAnimal::getType() const {
 }
 
 /**
- * @brief Destructeur FragTrap
+ * @brief Destructeur WrongAnimal
  */
 WrongAnimal::~WrongAnimal() {
     std::cout << "WrongAnimal destructor called" << std::endl;

@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:29:14 by raveriss          #+#    #+#             */
-/*   Updated: 2024/04/15 13:03:30 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/08 19:21:52 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iostream>
 
 /**
- * @brief Constructeur par défaut FragTrap
+ * @brief Constructeur par défaut WrongCat
  */
 WrongCat::WrongCat() {
     type = "WrongCat";
@@ -22,7 +22,7 @@ WrongCat::WrongCat() {
 }
 
 /**
- * @brief Opérateur d'affectation FragTrap
+ * @brief Opérateur d'affectation WrongCat
  */
 WrongCat & WrongCat::operator = (const WrongCat & other) {
     if (this != & other) {
@@ -32,7 +32,7 @@ WrongCat & WrongCat::operator = (const WrongCat & other) {
 }
 
 /**
- * @brief Constructeur de copie FragTrap
+ * @brief Constructeur de copie WrongCat
  */
 WrongCat::WrongCat(const WrongCat & other) : WrongAnimal(other) {
     *this = other;
@@ -40,7 +40,7 @@ WrongCat::WrongCat(const WrongCat & other) : WrongAnimal(other) {
 }
 
 /**
- * @brief Destructeur FragTrap
+ * @brief Destructeur WrongCat
  */
 WrongCat::~WrongCat() {
     std::cout << "WrongCat destructor called" << std::endl;

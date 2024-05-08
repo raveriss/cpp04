@@ -6,14 +6,14 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:26:56 by raveriss          #+#    #+#             */
-/*   Updated: 2024/05/02 10:38:35 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/08 19:21:18 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
 /**
- * @brief Constructeur par défaut FragTrap
+ * @brief Constructeur par défaut Cat
  */
 Cat::Cat() 
 {
@@ -22,7 +22,7 @@ Cat::Cat()
 }
 
 /**
- * @brief Destructeur FragTrap
+ * @brief Destructeur Cat
  */
 Cat::~Cat()
 {
@@ -30,12 +30,12 @@ Cat::~Cat()
 }
 
 /**
- * @brief Constructeur de copie FragTrap
+ * @brief Constructeur de copie Cat
  */
 Cat::Cat(const Cat & other) : Animal(other) {}
 
 /**
- * @brief Opérateur d'affectation FragTrap
+ * @brief Opérateur d'affectation Cat
  */
 Cat & Cat::operator=(const Cat & other)
 {

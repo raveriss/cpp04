@@ -6,14 +6,14 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 15:03:00 by raveriss          #+#    #+#             */
-/*   Updated: 2024/05/07 01:20:46 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/08 19:21:05 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
 /**
- * @brief Constructeur par défaut FragTrap
+ * @brief Constructeur par défaut Animal
  */
 Animal::Animal() : type("Animal")
 {
@@ -21,7 +21,7 @@ Animal::Animal() : type("Animal")
 }
 
 /**
- * @brief Destructeur FragTrap
+ * @brief Destructeur Animal
  */
 Animal::~Animal()
 {
@@ -37,7 +37,7 @@ Animal::Animal(const Animal & other) : type(other.type)  // Utilisation de l'ini
 }
 
 /**
- * @brief Opérateur d'affectation FragTrap
+ * @brief Opérateur d'affectation Animal
  */
 Animal & Animal::operator = (const Animal & other)
 {

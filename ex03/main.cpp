@@ -6,7 +6,7 @@
 /*   By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:38:25 by raveriss          #+#    #+#             */
-/*   Updated: 2024/05/06 14:49:50 by raveriss         ###   ########.fr       */
+/*   Updated: 2024/05/08 19:17:46 by raveriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -265,6 +265,43 @@ int main()
 		delete overflow;
 		delete fifthMateria; // Cinquième Materia jamais équipée doit être supprimée manuellement
 	}
+
+	/*
+	* TEST DEEP COPY OF CHARACTER WITH MATERIA
+	*/	
+	{
+		std::cout << std::endl << CYAN << "TESTING DEEP COPY OF CHARACTER WITH MATERIA" << NC << std::endl;
+
+		IMateriaSource* src = new MateriaSource();
+		src->learnMateria(new Ice());
+		src->learnMateria(new Cure());
+
+		ICharacter* original = new Character("Original");
+		AMateria* originalIce = src->createMateria("ice");
+		AMateria* originalCure = src->createMateria("cure");
+		original->equip(originalIce);
+		original->equip(originalCure);
+
+		ICharacter* copy = new Character(*dynamic_cast<Character*>(original));  // Copie profonde
+
+		// Tester l'utilisation pour vérifier l'identifiant unique et le type
+		std::cout << "Original uses on Copy:" << std::endl;
+		original->use(0, *copy);
+		original->use(1, *copy);
+
+		std::cout << std::endl << "Copy uses on Original:" << std::endl;
+		copy->use(0, *original);
+		copy->use(1, *original);
+
+		// Assertion Tests to ensure deep copy
+		ASSERT_TEST(originalIce->getType() == dynamic_cast<Character*>(copy)->getMateria(0)->getType() && originalIce != dynamic_cast<Character*>(copy)->getMateria(0), "Ice materia deep copied correctly");
+		ASSERT_TEST(originalCure->getType() == dynamic_cast<Character*>(copy)->getMateria(1)->getType() && originalCure != dynamic_cast<Character*>(copy)->getMateria(1), "Cure materia deep copied correctly");
+
+		delete src;
+		delete original;
+		delete copy;
+		
+	}	
 	
 	std::cout << std::endl << "All tests executed." << std::endl;	
 
