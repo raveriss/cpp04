@@ -6,11 +6,11 @@
 #    By: raveriss <raveriss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/15 18:38:41 by raveriss          #+#    #+#              #
-#    Updated: 2024/05/03 16:40:37 by raveriss         ###   ########.fr        #
+#    Updated: 2024/05/09 13:42:36 by raveriss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CXX = g++
+CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC = AMateria.cpp Character.cpp Cure.cpp Ice.cpp main.cpp MateriaSource.cpp
